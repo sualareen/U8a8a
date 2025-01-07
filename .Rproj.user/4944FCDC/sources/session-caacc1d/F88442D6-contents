@@ -1,0 +1,5 @@
+
+#定义脚本目录
+#
+source("./Rscript/globalenv.R")
+

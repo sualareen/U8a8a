@@ -1,0 +1,3 @@
+#定义脚本目录
+script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
+source()
