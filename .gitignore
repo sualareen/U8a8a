@@ -1,3 +1,11 @@
+# RStudio files
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
 
-Setting.txt
-.Rproj.user
+# Misc
+*.Rproj
+*.Rhistory
+.DS_Store
+Thumbs.db
