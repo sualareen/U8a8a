@@ -20,7 +20,7 @@ function(pracNum = "") {
 #* @get /3goi2
 function(pracNum = "") {
   pracNum <- as.integer(URLdecode(pracNum))
-  df <- df_jlpt3_goi1[sample(nrow(df_jlpt3_goi2), pracNum), ]
+  df <- df_jlpt3_goi2[sample(nrow(df_jlpt3_goi2), pracNum), ]
   return(df)
 }
 
@@ -28,7 +28,7 @@ function(pracNum = "") {
 #* @get /3goi3
 function(pracNum = "") {
   pracNum <- as.integer(URLdecode(pracNum))
-  df <- df_jlpt3_goi1[sample(nrow(df_jlpt3_goi3), pracNum), ]
+  df <- df_jlpt3_goi3[sample(nrow(df_jlpt3_goi3), pracNum), ]
   return(df)
 }
 
@@ -36,7 +36,7 @@ function(pracNum = "") {
 #* @get /3goi4
 function(pracNum = "") {
   pracNum <- as.integer(URLdecode(pracNum))
-  df <- df_jlpt3_goi1[sample(nrow(df_jlpt3_goi4), pracNum), ]
+  df <- df_jlpt3_goi4[sample(nrow(df_jlpt3_goi4), pracNum), ]
   return(df)
 }
 
@@ -44,7 +44,7 @@ function(pracNum = "") {
 #* @get /3goi5
 function(pracNum = "") {
   pracNum <- as.integer(URLdecode(pracNum))
-  df <- df_jlpt3_goi1[sample(nrow(df_jlpt3_goi5), pracNum), ]
+  df <- df_jlpt3_goi5[sample(nrow(df_jlpt3_goi5), pracNum), ]
   return(df)
 }
 
