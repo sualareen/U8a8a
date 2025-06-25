@@ -6,7 +6,7 @@ goi1read <- read.csv(here("temp.csv"), sep = ",", header = FALSE, stringsAsFacto
 
 #维护
 #1列名更新
-colnames(goi1read) <- c("過去問", "文例", "問題", "選択肢１", "選択肢２", "選択肢３", "選択肢４", "正解")
+colnames(goi1read) <- c("文例", "問題", "選択肢１", "選択肢２", "選択肢３", "選択肢４", "正解", "過去問")
 df <- rbind(goi1root, goi1read)
 #2排序更新7
 #sorted_goi1read <- goi1read[order(goi1read[,7]), ]
@@ -17,3 +17,6 @@ unique_df <- unique(df)
 
 #保存
 saveRDS(unique_df, here("lib", "Databases", "jlpt3_goi1.rds"))
+
+# 清空temp.csv文件 (Clear the temp.csv file)
+cat("", file = here("temp.csv"))
