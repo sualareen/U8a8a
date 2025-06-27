@@ -1,5 +1,5 @@
 library(here)
-
+library(dplyr)
 #读取
 goi1root <- readRDS(here("lib", "Databases", "jlpt3_goi1.rds"))
 goi1read <- read.csv(here("temp.csv"), sep = ",", header = FALSE, stringsAsFactors = FALSE)
@@ -14,9 +14,12 @@ df <- rbind(goi1root, goi1read)
 #goi1root$過去問 <- "000000N3goi1"
 #4重复值舍弃
 unique_df <- unique(df)
-
+#5行数据修订
+dplyr <- filter(goi1root, 問題 == "説得力")
+anti_df <- anti_join(goi1root, dplyr)
 #保存
 saveRDS(unique_df, here("lib", "Databases", "jlpt3_goi1.rds"))
+saveRDS(anti_df, here("lib", "Databases", "jlpt3_goi1.rds"))
 
 # 清空temp.csv文件 (Clear the temp.csv file)
 cat("", file = here("temp.csv"))
