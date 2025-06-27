@@ -1,6 +1,7 @@
 
 mecabEcho <- function(text) {
-  command <- paste("echo", text, "| mecab")
+  text <- shQuote(text)
+  command <- paste("echo -e", text, "| mecab")
   result <- system(command, intern = TRUE)
   result <- result[-length(result)]
   return(result)
