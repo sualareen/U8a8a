@@ -8,9 +8,11 @@ root <- pr()
 #    plumb() 会正确解析这个文件里的所有 API 注释
 dataController <- plumb(here("api", "DataController.R"))
 dataServer <- plumb(here("api", "DataServer.R"))
+mecabServer <- plumb(here("api", "MecabServer.R"))
 # 3. 将子路由挂载到根路由的某个路径下
 #    这里我们将 DataController 的所有 API 挂载到 /data 路径下
 root$mount("/control", dataController)
 root$mount("/server", dataServer)
+root$mount("/mecab", mecabServer)
 # 4. 运行根路由
 root$run(port = 35466)
